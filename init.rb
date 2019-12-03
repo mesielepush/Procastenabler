@@ -1,7 +1,6 @@
 require 'gosu'
 require_relative 'assets_loader'
 require_relative 'scenes.rb'
-require_relative 'pigeon.rb'
 
 
 class Game < Gosu::Window
