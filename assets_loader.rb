@@ -10,7 +10,8 @@ def load_audiovisual
         walk_left: Gosu::Image.new('images/PIZQ.png'),
         rigth_click: Gosu::Image.new('images/P2Pellet.png'),
         left_click: Gosu::Image.new('images/P1Pellet.png'),
-
+        bder_click: Gosu::Image.new('images/bder.png'),
+        bizq_click: Gosu::Image.new('images/bizq.png'),
 
     }
     sounds = {
