@@ -9,17 +9,21 @@ class Game < Gosu::Window
     def initialize
         super 800, 600
         self.caption = 'PoscastEnabler'
-        
+        #load audiovisuals
         @keyboard = load_metadata
         @img, @sounds = load_audiovisual
+        #sound setting
         @sounds[:enter].play(volume = 0.3)
         @sounds[:on].play(volume = 0.3)
         @sounds[:masking].volume = 0.8
         @sounds[:masking].play(true)
+        #font setting
         @font = Gosu::Font.new(self, Gosu::default_font_name, 15)
+        #init pigeon coordenates
         @y_pigeon_intro = 700
         @x_pigeon = 320
         @y_pigeon = 280
+        #initial settings
         @intro = true 
         @initial_scene = false
         @Session = false
@@ -65,8 +69,10 @@ class Game < Gosu::Window
 
         if @Session == true
             puts @x_pigeon
+
             @img[:background].draw(0, 0, -5)
             @font.draw(@time.to_s, 390, 235, 1, 1.0, 1.0, Gosu::Color::RED)
+            
             if Gosu::button_down? @keyboard[:kb_left]
                 @img[:walk_left].draw(@x_pigeon, @y_pigeon, 0)
             elsif Gosu::button_down? @keyboard[:kb_right]
