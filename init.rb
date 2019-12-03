@@ -4,7 +4,7 @@ require_relative 'scenes.rb'
 
 
 class Game < Gosu::Window
-    attr_writer :somthing
+    
     
     def initialize
         super 800, 600
@@ -72,7 +72,7 @@ class Game < Gosu::Window
 
             @img[:background].draw(0, 0, -5)
             @font.draw(@time.to_s, 390, 235, 1, 1.0, 1.0, Gosu::Color::RED)
-            
+
             if Gosu::button_down? @keyboard[:kb_left]
                 @img[:walk_left].draw(@x_pigeon, @y_pigeon, 0)
             elsif Gosu::button_down? @keyboard[:kb_right]
